@@ -1,0 +1,603 @@
+header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+nav {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #a12c3b,
+    #9d2d48,
+    #973055,
+    #90355f,
+    #863a68,
+    #7f3b6d,
+    #773c71,
+    #6f3e74,
+    #673c77,
+    #5d3a7b,
+    #513a7e,
+    #423981
+  );
+  position: fixed;
+  left: -100%;
+  top: 0;
+
+  transition: 0.5s;
+  z-index: -3;
+}
+nav.showNav {
+  z-index: 1;
+  left: 0;
+}
+.noscroll {
+  overflow-y: hidden;
+}
+.closeMenu {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+
+.closeMenu p {
+  color: var(--white);
+  font-size: 16px;
+  border: 1px solid;
+  border-color: var(--white);
+  border-radius: 50%;
+  height: 92px;
+  width: 92px;
+  line-height: 92px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  width: 70px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.toggle span {
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 10px;
+  transition: 0.5s;
+  left: 15px;
+}
+
+.toggle span:nth-child(1) {
+  transform: translateY(-15px);
+  width: 40px;
+  left: 15px;
+}
+
+.toggle.active span:nth-child(1) {
+  width: 40px;
+  transform: translateY(0) rotate(45deg);
+  transition-delay: 0.125s;
+}
+
+.toggle span:nth-child(2) {
+  transform: translateY(15px);
+  width: 40px;
+  left: 15px;
+}
+
+.toggle.active span:nth-child(2) {
+  width: 40px;
+  transform: translateY(0) rotate(315deg);
+  transition-delay: 0.25s;
+}
+
+.toggle.active span:nth-child(3) {
+  transform: translateX(60px);
+}
+
+.headerCall a {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.menu {
+  margin-top: 202px;
+  display: flex;
+  align-items: center;
+}
+.menu ul.navBar li {
+  list-style: none;
+  width: 400px;
+  transition: 0.3s;
+}
+.menu ul.navBar li a {
+  color: var(--white);
+  font-size: 30px;
+  line-height: 38px;
+  padding: 28px 0;
+  border-top: 1px solid;
+  border-color: var(--white);
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.social {
+  margin-top: 80px;
+}
+.menu ul.navBar li:last-child a {
+  border-bottom: 1px solid;
+  border-color: var(--white);
+}
+
+.menu ul.navBar li:hover a {
+  font-weight: 700;
+}
+.social ul {
+  display: flex;
+  align-items: center;
+}
+.social ul li {
+  list-style: none;
+  margin-right: 15px;
+  border: 1px solid;
+  border-color: var(--white);
+  border-radius: 50%;
+  text-align: center;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+}
+
+.social ul li.followUs {
+  width: auto;
+  height: inherit;
+  border: none;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+}
+.social ul li a {
+  color: var(--white);
+
+  display: inline-block;
+}
+
+.salesManage {
+  margin-left: 164px;
+}
+.salesManage ul li {
+  list-style: none;
+  color: var(--white);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.salesManage ul li:last-child {
+  margin-bottom: 0;
+}
+.salesManage ul li span {
+  display: block;
+  font-size: 27px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
+.sliderBaner {
+  position: relative;
+}
+
+.bannerText,
+.inspired {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bannerCircle {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to bottom,
+    #a12c3b,
+    #9d2d48,
+    #973055,
+    #90355f,
+    #863a68,
+    #7f3b6d,
+    #773c71,
+    #6f3e74,
+    #673c77,
+    #5d3a7b,
+    #513a7e,
+    #423981
+  );
+}
+
+.dashedCircle {
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  border: 1px dashed;
+  border-color: var(--white);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cargo {
+  position: absolute;
+  left: 27%;
+  top: -9%;
+}
+
+.aricraft {
+  position: absolute;
+  left: -29%;
+  top: 26%;
+}
+
+.groundStaff {
+  position: absolute;
+  right: -4%;
+  bottom: -8%;
+}
+
+.cargo p,
+.aricraft p,
+.groundStaff p {
+  color: var(--white);
+  text-transform: uppercase;
+}
+.cargo p::after {
+  content: "";
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  background: var(--white);
+  border-radius: 50%;
+  top: 45px;
+    left: 24px;
+}
+  
+
+.aricraft p::after {
+  content: "";
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  background: var(--white);
+  border-radius: 50%;
+ top: 8px;
+    left: 142px;
+}
+
+.groundStaff p::after {
+  content: "";
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  background: var(--white);
+  border-radius: 50%;
+  top: -31px;
+  left: 6px;
+}
+
+.cargo i,
+.aricraft i,
+.groundStaff i {
+  padding-right: 5px;
+}
+.inspired {
+  margin-left: 10rem;
+}
+.inspired h4 {
+  color: var(--white);
+  font-size: 72px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.inspired h4 span {
+  font-size: 110px;
+}
+.inspired h3 {
+  color: var(--white);
+  font-size: 80px;
+  font-weight: 900;
+  margin-top: 4rem;
+  text-transform: uppercase;
+}
+.airlineLeader {
+  width: 672px;
+}
+
+.airlineLeader .heading {
+  margin-bottom: 42px;
+}
+.overView h1 {
+  margin-top: 63px;
+}
+
+.overView p {
+  max-width: 560px;
+}
+
+.overView h4 {
+  margin-top: 58px;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 300;
+}
+.overView {
+  position: relative;
+}
+.airline {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: inherit;
+}
+
+.counterBoxFlex {
+  display: flex;
+}
+.counterBox {
+  flex: 0 0 275px;
+  width: 275px;
+  border-top: 1px solid;
+  border-color: var(--border);
+  margin: 45px 23px 97px 0;
+  padding-top: 45px;
+}
+.counterBox:last-child {
+  margin-right: 0;
+}
+.counterBox span {
+  color: var(--primary-color);
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 63px;
+}
+.counterBox p {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.ourSolutions h2 {
+  margin-bottom: 29px;
+}
+
+.ourSolutions p {
+  max-width: 900px;
+}
+
+.services {
+  background: url(../images/testimonialBg.jpg);
+  background-repeat: no-repeat;
+  height: 650px;
+  margin-top: 103px;
+  padding: 76px 0 92px 0;
+  overflow: hidden;
+}
+
+.servicesSlider h3 {
+  color: #fff;
+}
+
+.servicesSliderBox {
+  margin-top: 65px;
+}
+
+.slider {
+  position: relative;
+}
+.sliderThum {
+  max-width: 785px;
+  position: absolute;
+  bottom: 0;
+  left: 63%;
+}
+
+.servicesSliderBox {
+  display: flex;
+}
+
+.servicesSliderBox .testiImage {
+  flex: 0 0 336px;
+  max-width: 336px;
+}
+
+.servicesSliderBox .testiText {
+  position: relative;
+  flex: 0 0 250px;
+  max-width: 250px;
+}
+
+img.testiArrow {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+}
+
+.servicesSliderBox .testiText p {
+  color: #fff;
+  padding: 40px 0 0 60px;
+}
+
+.slick-initialized .slick-slide {
+  margin-right: 22px;
+  cursor: pointer;
+}
+
+.slick_arrow {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  display: flex;
+}
+
+.slick_arrow i {
+  color: #fff;
+  font-size: 42px;
+}
+
+.prev {
+  margin-right: 20px;
+}
+.prev,
+.next {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  .services {
+    background: url(../images/1920.jpg);
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .counterBoxFlex {
+    display: block;
+  }
+
+  .airlineLeader {
+    width: auto;
+  }
+
+  .inspired h4{
+    font-size: 20px;
+  }
+  .inspired h3{
+    font-size: 30px;
+    margin-top: 1rem;
+  }
+  .inspired {
+    margin-left: 0;
+}
+.menu{
+    display: block;
+}
+.dashedCircle {
+    height: 150px;
+    width: 150px;
+}
+.bannerCircle {
+    height: 120px;
+    width:120px
+}
+.headerCall{
+    display: none
+}
+.menu ul.navBar li{
+    width: 280px;
+}
+.salesManage{
+    display: none;
+}
+.closeMenu {
+    right: 30px;
+    top: 20px;
+}
+.closeMenu p{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+}
+.menu ul.navBar li a {
+    font-size: 22px;
+    line-height: 38px;
+    padding: 15px 0;
+}
+.dashedCircle div{
+    display: none;
+}
+.inspired h4 span {
+    font-size: 40px;
+}
+.header{
+    margin-top: 15px;
+}
+.heading {
+    font-size: 22px;
+    line-height: 30px;
+}
+.overView h1 {
+    margin-top: 30px;
+}
+.overView h4 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+.counterBox {
+     
+    margin: 45px 23px 45px 0;
+}
+.sliderThum{
+    display: none;
+}
+.servicesSliderBox {
+    display: block;
+        margin-top: 15px;
+}
+.services{
+    overflow: inherit;
+      margin-top: 53px;
+  padding: 46px 0 32px 0;
+   
+}
+.servicesSliderBox .testiText p {
+    color: #fff;
+    padding:20px 0 0 0px;
+}
+.servicesSliderBox .testiText{
+    max-width:inherit;
+}
+
+.slick_arrow {
+    position: absolute;
+    top: inherit;
+  right: 0;
+    bottom: -40px;
+}
+img.testiArrow{
+    display: none;
+}
+p{
+    font-size: 14px;
+}
+
+.slick_arrow {
+    position: absolute;
+    top: inherit;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-59px, 0%);
+}
+}
